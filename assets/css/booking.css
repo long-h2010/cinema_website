@@ -1,0 +1,372 @@
+@import url(./navbar_footer.css);
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+body {
+  background: #444451;
+}
+.head-name {
+    position: relative;
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Sedgwick Ave', cursive;
+}
+
+
+.head-name .line1 {  
+    position: absolute;
+    margin-left: 100px;
+    left: 0;
+    bottom: 30px;
+    width: 25%;
+    height: 5px;
+    display: flex;
+    border-radius: 15px;
+    background-color: red;
+    transition: all 0.2s ease;
+}
+
+
+.head-name .line2 {  
+    position: absolute;
+    right: 0;
+    margin-right: 100px;
+    bottom: 30px;
+    width: 25%;
+    height: 5px;
+    display: flex;
+    border-radius: 15px;
+    background-color: red;
+    transition: all 0.2s ease;
+}
+
+.full-page {
+    width: 100%;
+    background-image: linear-gradient(rgba(88, 12, 12, 0.406),rgba(0, 0, 0, 0.341)),url(../img/background/booking.png);
+    background-position: center;
+    background-size: cover;
+    color: #fff1f1;
+    position: absolute;
+}
+
+.navbar {
+    display: flex;
+    padding-left: 100px;
+    padding-right: 30px;
+    padding-top: 20px;
+}
+
+.nameform {
+    margin: auto;
+    margin-right: 50%;
+    text-align: center;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 25px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    color: #fff1f1;
+    margin: 50px auto;
+}
+
+.container form{
+    padding:20px;
+    width:750px;
+    background:rgba(119, 102, 102, 0.38);
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+
+.container form .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap:15px;
+}
+
+.container form .row .col{
+    flex:1 1 250px;
+}
+
+.container form .row .col .title{
+    font-size: 20px;
+    color:#CA2D11;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+  
+.container form .row .col .inputBox{
+    margin:15px 0;
+}
+  
+.container form .row .col .inputBox span{
+    margin-bottom: 10px;
+    font-weight: bold;
+    display: block;
+}
+  
+.container form .row .col .inputBox input{
+    width: 200px;
+    border:1px solid #ccc;
+    padding:10px 15px;
+    background-color: rgba(202, 23, 53, 0.98);
+    border-radius: 5px;
+    font-size: 15px;
+    text-transform: none;
+    margin-left: 10px;
+}
+
+.input-seats{
+    height: 100px;
+    word-wrap: break-word;
+}
+  
+.container form .row .col .inputBox input::placeholder{
+    color: white;
+}
+  
+.container form .row .col .inputBox input:focus::placeholder{
+    color: white;
+}
+
+.container form .row .col .inputBox input:focus{
+    border:1px solid #000;
+    background-color: rgb(253, 196, 196);
+    color: black;
+}
+  
+.container form .row .col .flex{
+    display: flex;
+    gap:15px;
+}
+  
+.container form .row .col .flex .inputBox{
+    margin-top: 5px;
+}
+  
+.container form .row .col .inputBox img{
+    height: 34px;
+    margin-top: 5px;
+    filter: drop-shadow(0 0 1px #000);
+}
+
+.seat {
+    background-color: #444451;
+    height: 30px;
+    width: 30px;
+    margin: 3px;
+    display: block;
+    color: #eb9262;
+    /* font-weight: bold; */
+    font-size: 15px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 3px;
+    border: 1px solid white;
+}
+
+.seat.selected {
+    background-color: #CA2D11;
+    color: #fff;
+}
+
+.seat.select {
+    background-color: #CA2D11;
+}
+
+.seat.available{
+    background-color: #444451;
+}
+
+.seat.sold {
+    background-color: #fff;
+}
+
+.seat:not(.sold){
+    cursor: pointer;
+}
+
+.seat:not(.sold):hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+  
+.showcase .seat:not(.sold):hover {
+    cursor: default;
+    transform: scale(1);
+}
+  
+#screen {
+    background-color: #fff;
+    height: 120px;
+    color: rgb(137, 134, 134);
+    justify-content: center;
+    text-align: center;
+    font-size: 40px;
+    width: 100%;
+    margin: 15px 0;
+    transform: rotateX(-48deg);
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+.container form .submit-btn{
+    width: 100%;
+    padding:12px;
+    font-size: 17px;
+    background-color: rgb(211, 55, 55);
+    color:#fff;
+    margin-top: 5px;
+    cursor: pointer;
+}
+  
+.container form .submit-btn:hover{
+    background-color: rgba(193, 0, 29, 0.834);
+} 
+
+.container form .row .col .b-date{
+    padding-top: 10px;
+    padding-bottom: 5px;
+
+}
+
+.container form .row .col .b-date .day {
+    background-color: rgba(90, 7, 21, 0.98);
+    color: #717171;
+    cursor: pointer;
+    height: 48px;
+    position: relative;
+    width: 77px;
+    border: 2px solid #fdfcf0;
+    border-radius: 5px;
+}
+
+.container form .row .col .b-date .day > strong {
+    color: #fff1f1;
+    font-size: 32px;
+    font-weight: normal;
+    left: 31px;
+    line-height: 32px;
+    position: absolute;
+    top: 8px;
+}
+
+.container form .row .col .b-date .day span {
+    margin-bottom: 10px;
+    color: #fff1f1;
+    font-size: 11px;
+    left: 4px;
+    position: absolute;
+    top: 4px;
+}
+
+.container form .row .col .b-date .day > em {
+    color: #fff1f1;
+    font-size: 11px;
+    font-style: normal;
+    left: 4px;
+    position: absolute;
+    top: 20px;
+}
+
+.container form .row .col .b-date ul{
+    border-bottom: 1px solid #999;
+    padding: 10px 0px;
+}
+
+.container form .row .col .b-date ul li{
+    list-style: none;
+    display: inline-block;
+    gap:15px;
+}
+
+h3{
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    color:#CA2D11;
+    padding-bottom:5px; 
+}
+.container form .row .col #b-time{
+    padding: 10px 0px;
+}
+.container form .row .col #b-time ul {
+    border-bottom: 1px solid #999;
+    padding: 1px;
+    padding-bottom: 10px;
+}
+
+.container form .row .col #b-time ul li.item {
+    padding:3px;
+    cursor: pointer;
+    list-style: none;
+    display: inline-block;
+    border: 1px solid #cbcabe;
+    color: #fff1f1;
+    text-align: center;
+    padding:10px;
+    margin: 3px;
+}
+
+.container form .row .col #b-time li .item span {
+    color: #222;
+    clear: both;
+    float: left;
+    width: 100%;
+}
+
+p.text{
+    margin: 5px 0;
+}
+
+p.text span{
+    color: rgb(158, 248, 158);
+}
+
+.showcase {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: rgb(252, 228, 228);
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.showcase li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.showcase li small {
+    margin-left: 2px;
+}
+
+.movie-container {
+    margin: 20px 0;
+    border-bottom: 1px solid #999;
+    padding-bottom:5px; 
+}
+
+.movie-container select {
+    background-color: rgba(148, 16, 38, 0.98);
+    border: 0;
+    width: 200px;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 10px;
+    padding: 5px 15px 5px 15px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.flex .inputBox{
+    border-radius: 10px;
+}

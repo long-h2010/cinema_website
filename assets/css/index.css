@@ -1,0 +1,305 @@
+@import url(./navbar_footer.css);
+
+/* CAROUSEL */
+.carousel-inner img {
+    height: 500px;
+    width: 100%;
+}
+
+/* TABS */
+.tabs {
+    display: flex;
+    position: relative;
+    margin-left: 9%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.tab-item.active {
+    opacity: 1;
+    color: white;
+}
+
+.tab-item {
+    min-width: 80px;
+    padding: 16px 20px 11px 20px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #c23564;
+    border-bottom: 5px solid transparent;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+  
+.tab-item > i {
+    font-size: 24px;
+    width: 32px;
+    position: relative;
+    top: 2px;
+}
+
+.tab-item:hover {
+    opacity: 1;
+    background-color: rgba(194, 53, 100, 0.05);
+    border-color: rgba(194, 53, 100, 0.1);
+}
+
+.tabs .line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 6px;
+    border-radius: 15px;
+    background-color: red;
+    transition: all 0.2s ease;
+}
+
+.tab-pane.active {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.tab-pane {
+    display: none;
+}
+
+/* LIST MOVIES */
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    margin: auto 120px;
+}
+  
+.movie-card {
+    --scale: 0.8;
+    cursor: pointer;
+}
+  
+.card-head {
+    position: relative;
+    height: 250px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.card-head img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  object-fit: cover;
+}
+  
+.movie-card:hover .card-img { 
+    transform: scale(1.1); 
+}
+  
+.movie-card .card-overlay {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    backdrop-filter: blur(5px);
+}
+  
+.movie-card:hover .card-overlay { 
+    opacity: 1; 
+}
+  
+.buyticket {
+    display: flex;
+    justify-content: center;
+    border: 2px solid red;
+    border-radius: 25px;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(var(--scale));
+}
+  
+.buyticket > span {
+    line-height: 24px;
+    padding: 0 8px;
+    padding-top: 3px;
+    font-weight: bold;
+}
+  
+.buyticket ion-icon {
+    font-size: 30px;
+    --ionicon-stroke-width: 20px;
+    line-height: 48px;
+}
+  
+.buyticket:hover {
+    background-color: rgba(0,0,0,0.5);
+    color: red;
+}
+  
+.movie-card:hover :is(.buyticket) { 
+    --scale: 1; 
+}
+  
+.card-body h5, p {
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+/* COMMENTARY BLOG*/
+
+.cmtblog{
+    margin-top: 60px;
+}
+
+.symbol-header {
+    margin-bottom: 25px;
+}
+
+.symbol-header a {
+    min-width: 80px;
+    font-size: 22px;
+    padding: 11px 20px;
+    text-align: center;
+    color: white;
+    background-color: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.symbol-header a > i{
+    font-size: 24px;
+}
+
+.symbol-header:hover a {
+    color: red;
+    font-weight: bold;
+}
+
+.symbol-header .line {
+    position: absolute;
+    height: 6px;
+    padding-left: 0;
+    width: 200px;
+    margin-top: 8px;
+    border-radius: 15px;
+    background-color: red;
+}
+
+.cmtblog img{
+    width: 220px;
+    height: 180px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.cmt-card{
+    display: flex;
+}
+
+.blog-card{
+    display: flex;
+}
+
+.cmt-card a, .blog-card a{
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.cmt-card a:hover, .blog-card a:hover{
+    color: #e86c00;
+    cursor: pointer;
+}
+
+.cmt-list-card, .blog-list-card {
+    display: block;
+    text-align: center;
+}
+
+.cmt-list-card img, .blog-list-card img{
+    width: 300px;
+    height: 160px;
+}
+
+.cmt-list-title, .blog-list-title{
+    display: block;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.cmt-list-card a:hover, .blog-list-card a:hover{
+    color: #e86c00;
+    cursor: pointer;
+}
+
+
+/* PROMOTION */
+.all {
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.grid-all {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.voucher-card {
+    position: relative;
+    width: 300px;
+    height: 450px;
+}
+
+.voucher-card img {
+    width: 300px;
+    height: 450px;
+}
+
+.overlay-voucher {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    color: azure;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+    padding: 20px;
+}
+
+.overlay-voucher:hover{
+    opacity: 1;
+}
+
+.btn-detail-voucher {
+    border: 1px solid white;
+    background: none;
+    margin-top: 30px;
+    color: white;
+    border-radius: 2px;
+}
+
+.btn-detail-voucher:hover {
+    background-color: #e86c00;
+    border-color: black;
+}

@@ -1,0 +1,139 @@
+@import url(./navbar_footer.css);
+
+.tabs {
+    display: flex;
+    position: relative;
+    margin-left: 9%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.tab-item.active {
+    opacity: 1;
+    color: white;
+}
+
+.tab-item {
+    min-width: 80px;
+    padding: 16px 20px 11px 20px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #c23564;
+    border-bottom: 5px solid transparent;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+  
+.tab-item > i {
+    font-size: 24px;
+    width: 32px;
+    position: relative;
+    top: 2px;
+}
+
+.tab-item:hover {
+    opacity: 1;
+    background-color: rgba(194, 53, 100, 0.05);
+    border-color: rgba(194, 53, 100, 0.1);
+}
+
+.tabs .line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 6px;
+    border-radius: 15px;
+    background-color: red;
+    transition: all 0.2s ease;
+}
+
+.tab-pane.active {
+    display: flex;
+    justify-content: center;
+}
+
+.tab-pane {
+    display: none;
+}
+
+#contact{
+    height: 500px;
+}
+
+.tab-pane h2{
+    text-align: center;
+    font-weight: bold;
+}
+
+.contact-form-left{
+    background-color: var(--color-primary);
+    color: #eae8e8;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+}
+
+.contact-info-right{
+    margin-bottom: 10px;
+    padding-top: 20px;
+    border-radius: 10px;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6)), url(../img/contact_us_bg.jpg);
+    background-position: center;
+    color: #eae8e8;
+    height: 398.212px;
+}
+
+input.form-control{
+    background-color: var(--color-primary);
+    margin: 10px;
+    color: white;
+}
+
+input.form-control::content{
+    font-weight: bold;
+}
+
+textarea.form-control{
+    background-color: var(--color-primary);
+    margin: 10px;
+    color: white;
+}
+
+textarea.form-control::content{
+    font-weight: bold;
+}
+
+.contact-info-right a {
+    text-decoration: none;
+    color:#ea1538;
+}
+
+.contact-info-right a:hover {
+    color: rgb(222, 255, 55);
+}
+
+.contact-info-right ul {
+    list-style: none;
+    margin-top: 50px; 
+}
+
+.contact-info-right i {
+    content: "\f3c5";
+    margin-right: 8px;
+    color: #ea1538;
+}
+
+  /* Recruit */
+
+.accordion-long {
+    height: 1000px;
+}
+
+.accordion-button.collapsed {
+    border: none;
+    color: red;
+    font-weight: bold;
+}
